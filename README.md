@@ -1,6 +1,7 @@
 My first Readme
 Housify
-Housify
+![image](https://github.com/Ric254/portfolio-project/assets/110993526/348ab563-a278-4849-af66-2ee6940e31e9)
+
 
 Group project Web Portfolio project
 
