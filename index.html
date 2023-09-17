@@ -1,67 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Customer_Review - Customer Feedback</title>
-</head>
-<body>
-    <div class="container">
-        <img src="{{ logo_url }}" alt="Customer Review Logo"/>
-        {% if message %}
-        <p class="message">{{ message | safe }}</p>
-        {% endif %}
-        <form action="/submit" method="POST">
-            <div class="form-group">
-                <h3>Customer</h3>
-                <input 
-                   type="text"
-                   name="customer"
-                   placeholder="Customer's Name" 
-                />
-            </div>
-            <div class="form-group">
-                <h3>Retailer</h3>
-                <select name="retailer">
-                    <option value="">Please select a retailer</option>
-                    <option value="Motis Car Yard">Motis Cars</option>
-                    <option value="Clean Shelf Supermarket">CS Supermarket</option>
-                    <option value="ExcelEntrepreneur">E-Entrepreneurship Consultancy</option>
-                    <option value="Clear Glass">Clear Glass Cleaners</option>
-                    <option value="Value Addition">Value Addition Planners</option>
-                    <option value="Dentist Union">Dentists Union</option>
-                    <option value="Repairs">Repair Department</option>
-                    <option value="Devlopes">Devslopes Technologies</option>
-                    <option value="Richtcy">Ritchy Law</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <h3>Please rate your retailer</h3>
-                <input type="radio" name="rating" value="1" />1
-                <input type="radio" name="rating" value="2" />2
-                <input type="radio" name="rating" value="3" />3
-                <input type="radio" name="rating" value="4" />4
-                <input type="radio" name="rating" value="5" />5
-                <input type="radio" name="rating" value="6" />6
-                <input type="radio" name="rating" value="7" />7
-                <input type="radio" name="rating" value="8" />8
-                <input type="radio" name="rating" value="9" />9
-                <input type="radio" name="rating" value="10" checked />10
-            </div>
-            <div class="form-group">
-                <h3>Comments about your experience</h3>
-                <textarea
-                 name="comments"
-                 id=""
-                 cols="30" 
-                 rows="10"
-                 placeholder="Tell us what you liked and/or did not like"
-                ></textarea>
-                <input type="submit" value="submit" class="btn" />
-            </div>
-        </form>
-    </div>
-</body>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+		<title>DentoFresh</title>
+  </head>
+  <body>
+    <header>
+      <figure class="logo-thumbnail">
+        <img class="logo" src="./images/DT.png" />
+      </figure>
+      <nav class="nav-bar">
+        <a class="nav-item" href="#" autofocus="autofocus">Inicio</a>
+				<a class="nav-item" href="#">Nosotros</a>
+				<a class="nav-item" href="#">Servicios</a>
+				<a class="nav-item" href="#">Blog</a>
+				<a class="nav-item" href="#">Contáctanos</a>
+      </nav>
+    </header>
+    <main>
+      <section class="main-img-section"></section>
+      <section class="services">
+				
+				<div class="service">
+					<i class="service-circle"></i>
+					<span class="service-title">Ortodoncia</span>	
+				</div>
+				
+        <div class="service">
+					<i class="service-circle"></i>
+					<span class="service-title">Endodoncia</span>	
+				</div>
+				
+        <div class="service">
+					<i class="service-circle"></i>
+					<span class="service-title">Rehabilitación Oral</span>
+				</div>
+				
+        <div class="service">
+					<i class="service-circle"></i>
+					<span class="service-title">Estetica Dental</span>
+				</div>
+				
+				<div class="service">
+					<i class="service-circle"></i>
+					<span class="service-title">Odontologia General</span>
+				</div>
+				
+        <div class="service">
+					<i class="service-circle"></i>
+					<span class="service-title">Implantologia</span>	
+				</div>
+     </section>
+     <section class="secondary-img-section">
+       <form>
+         <span class="form-title">Reservas</span>
+         <input class="input-text"  type="text" />
+         <input class="input-text"  type="text" />
+				 <input class="button" type="submit" value="Listo" />
+       </form>
+     </section>
+     <section class="ubication-section">
+       <span class="ubication-title">Ubicación</span>
+       <span class="sample-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat urna eget.</span>
+     </section>
+     </main>
+     <footer>
+			 <section class="footer-wraper-info">
+				 <div class="footer-container-link">
+					 <a class="footer-link" href="#">Home</a>
+					 <a class="footer-link" href="#">About</a>
+					 <a class="footer-link" href="#">Features</a>
+					 <a class="footer-link" href="#">Pricing</a>
+					 <a class="footer-link" href="#">Contact us</a>
+				 </div>
+				 <div class="footer-container-link">
+					 <a class="footer-link" href="#">Search</a>
+					 <a class="footer-link" href="#">T & Cs</a>
+					 <a class="footer-link" href="#">Privacy</a>
+					 <a class="footer-link" href="#">Community</a>
+				 </div>
+				 <div class="footer-text-container">
+					 <p>Curabitur nec dolor vitae justo rhoncus pellentesque quis sit amet magna. Donec nec lacus non risus dignissim lobortis.</p>
+					 <p>Integer at dictum lectus, eu dapibus justo. Praesent et ex odio. Pellentesque.</p>
+				 </div>
+			 </section>
+       <div class="footer-container-icons">
+         <a class="footer-icon" href="#"><img src="./images/facebook-logo.svg"></a>
+				 <a class="footer-icon" href="#"><img src="./images/twitter-logo.svg"></a>
+				 <a class="footer-icon" href="#"><img src="./images/instagram-logo.svg"></a>
+       </div>
+    </footer>
+  </body>
 </html>
